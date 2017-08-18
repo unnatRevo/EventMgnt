@@ -1,0 +1,28 @@
+<div class="login-box">
+  <div class="login-logo">
+    <b>Bulletin</b>Board
+  </div>
+  <div class="login-box-body">
+      <div class="form-group has-feedback">
+        <input type="text" #txtUsername class="form-control" placeholder="Usrename or Email">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" #txtPassword class="form-control" placeholder="Password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+              <input type="checkbox"> Remember Me
+            </label>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat" (click)="onButtonClick(txtUsername.value,txtPassword.value)">Sign In</button>
+        </div>
+      </div>
+    <a routerLink="/registration" class="text-center">Register a new membership</a>
+  </div>
+</div>
