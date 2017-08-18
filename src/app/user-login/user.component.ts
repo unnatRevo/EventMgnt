@@ -17,7 +17,7 @@ export class UserComponent {
 
     onButtonClick(username: string, password: string) {
         this._userService.authenticateUser(username, password)
-            .subscribe(result => {this._userAuth = result; });
+            .subscribe(result => {this._userAuth = result.json(); });
         console.log('User Login result : ' + this._userAuth);
     }
 }
